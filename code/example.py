@@ -54,8 +54,8 @@ ow = 20
 s = 5
 
 # generate windowed training/test datasets
-Xtrain, Ytrain= generate_dataset.windowed_dataset(y_train, input_window = iw, output_window = ow, stride = s)
-Xtest, Ytest = generate_dataset.windowed_dataset(y_test, input_window = iw, output_window = ow, stride = s)
+Xtrain, Ytrain= generate_dataset.windowed_dataset(y_train, input_window = iw, output_window = ow, stride = s, num_features=3)
+Xtest, Ytest = generate_dataset.windowed_dataset(y_test, input_window = iw, output_window = ow, stride = s, num_features=3)
 
 # plot example of windowed data  
 plt.figure(figsize = (10, 6)) 

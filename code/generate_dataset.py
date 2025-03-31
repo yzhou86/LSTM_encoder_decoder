@@ -77,11 +77,11 @@ def windowed_dataset(y, input_window = 5, output_window = 1, stride = 1, num_fea
         for ii in np.arange(num_samples):
             start_x = stride * ii
             end_x = start_x + input_window
-            X[:, ii, ff] = y[start_x:end_x, ff]
+            X[:, ii, ff] = y[start_x:end_x, 0]
 
             start_y = stride * ii + input_window
-            end_y = start_y + output_window 
-            Y[:, ii, ff] = y[start_y:end_y, ff]
+            end_y = start_y + output_window
+            Y[:, ii, ff] = y[start_y:end_y, 0]
 
     return X, Y
 
